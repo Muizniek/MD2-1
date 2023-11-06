@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+body{
+  background-color: rgb(219, 233, 238);
+  width: 100%;
+  justify-content: center;
+}
+
+
+.frame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: -1;
+}
+.inner--frame{
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  flex-direction: column;
+  max-width: 428px;
+  border: 2px solid orangered;
+  margin: 104px;
+  height: 545px;
+  width: 364px;
+}
+
+.input--label--1{
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Roboto Condensed';
+  color: #130f1c;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.input--label--2{
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Roboto Condensed';
+  color: #130f1c;
+  text-align: left;
+}
+
+ input#password, input#inputField{
+  border-radius: 5px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px 14px 12px 12px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  color: rgba(24, 39, 58, 0.94);
+  font-family: Inter;
+ }
+
+.subscribe--toggle{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-right: 200px;
+  margin-bottom: 20px;
+}
+
+.Subscribe--to--news{
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Inter;
+  color: #484848;
+  text-align: left;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+/* Hide the default checkbox input */
+.toggle input {
+  display: none;
+}
+
+/* Style the slider that represents the button's state */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Initial background color */
+  border-radius: 30px; /* Rounded slider */
+  transition: 0.4s; /* Transition for smooth animation */
+}
+
+/* Change the slider's background color when the input is checked (toggled) */
+.toggle input:checked + .slider {
+  background-color: #fd7918; /* New background color when checked */
+}
+
+/* Style the slider's inner circle (the "button" of the toggle) */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s; /* Transition for smooth animation */
+}
+
+/* Move the slider's inner circle to the right when the input is checked (toggled) */
+.toggle input:checked + .slider::before {
+  transform: translateX(12px); /* Slide to the right */
+}
+
+
+
+.sing--in--button{
+  width: 100%;
+  border-radius: 5px;
+  background-color: #651fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 48px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  border: transparent;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.forgot--pass{
+  font-size: 16px;
+  text-decoration: underline;
+  line-height: 24px;
+  font-family: 'Roboto Condensed';
+  color: #651fff;
+  text-align: left;
+  margin-bottom: 64px;
+}
+
+.or--continue-with{
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Roboto Condensed';
+  color: #5a5761;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.optional--butons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.google, .facebook{
+  flex: 1;
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ececee;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 48px;
+  cursor: pointer;
+}
