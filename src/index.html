@@ -10,37 +10,68 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="frame">
-        <div class="inner--frame">
-            <div class="input--label--1">
-                <label for="inputField">Input Label</label> <br>
-                <input type="text" id="inputField" name="inputField" placeholder="Placeholder Text">
+    <div class="container">
+        <form id="my-form" class="light-mode">
+            <div class="input-label">
+                    <div class="form-group">
+                        <label for="name">Input Label</label>
+                        <input type="text" class="name-light" name="name" required placeholder="Placeholder Text">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Input Label</label>
+                        <input type="password" class="name-light" name="name" required placeholder="Placeholder Text">
+                    </div>
             </div>
-            <div class="input--label--2">
-                <label for="inputField">Input Label</label> <br>
-                <input type="password" id="password" name="password">
+            <div class="toggle-container">
+                <label class="toggle-switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+                <p class="p">Subscribe to News</p>
+              </div>
+            <div class="button--switch--wraper">
+                <button class="button" type="submit">Sign In</button>
+                <div class="switch-container">
+                    <label for="mode-switc" class="switch-label">Switch Dark Mode:</label>
+                    <label class="switch">
+                        <input type="checkbox" id="mode-switc">
+                        <span class="round"></span>
+                    </label>
+                </div>
             </div>
-            <div class="subscribe--toggle">
-                <label class="toggle">
-                    <input type="checkbox" id="toggle-button">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="Subscribe--to--news">Subscribe to News</p>
+            <div class="forgot--password">
+                <div class="questione">
+                    <p class="p--pasw"><a class="forgot--pass" href="#">Forgot your password?</a></p>
+                </div>
+                <div class="option">
+                    <p class="or--continue-with">or continue with</p>
+                    <div class="buttons--fb-goo">
+                        <button class="google"><img src="/assets/images/google.svg" alt=""></button>
+                        <button class="facebook"><img src="/assets/images/facebook.svg" alt=""></button>
+                    </div>
+                </div>
             </div>
-            <button class="sing--in--button">Sign In</button>
-            <p class="forgot--pass"><a href="#">Forgot your password?</a></p>
-            <p class="or--continue-with">or continue with</p>
-            <div class="optional--butons">
-                <button class="google"><img src="/assets/images/google.svg" alt=""></button>
-                <button class="facebook"><img src="/assets/images/facebook.svg" alt=""></button>
-            </div>
-        </div>
+        </form>
     </div>
 
 
 
 
+    <script>
+                const modeSwitch = document.getElementById('mode-switc');
+const form = document.getElementById('my-form');
 
-    <script src="/scripts.js"></script>
+modeSwitch.addEventListener('change', () => {
+  if (modeSwitch.checked) {
+    form.classList.remove('light-mode');
+    form.classList.add('dark-mode');
+    document.body.style.backgroundColor = '#130F1C'; // Set the background color to black
+  } else {
+    form.classList.remove('dark-mode');
+    form.classList.add('light-mode');
+    document.body.style.backgroundColor = 'white'; // Set the background color to white (or any desired color)
+  }
+});
+    </script>
 </body>
 </html>
